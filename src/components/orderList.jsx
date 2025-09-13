@@ -5,23 +5,32 @@ import DummyData from "../../DummyData.json";
 const OrderList = () => {
   const [orders, setOrders] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [setError] = useState(null);
+  const [error, setError] = useState(null);
+
+  const getCustomerName = (customerId) => {
+    const customer = DummyData.customers.find((c) => c._id === customerId);
+    return customer ? customer.name : `Customer ${customerId.slice(-4)}`;
+  };
 
   useEffect(() => {
     const fetchOrders = async () => {
       try {
+        // Try to fetch from API first
         const response = await axios.get("http://localhost:4000/api/orders");
         const sortedOrders = response.data.sort(
           (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
         );
         setOrders(sortedOrders);
-      } catch (apiError) {
-        console.warn("API request failed, using dummy data", apiError);
+      } catch (error) {
+        console.warn("API request failed, using dummy data", error);
+        // Fall back to dummy data
         const dummySorted = (DummyData.orders || []).sort(
           (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
         );
         setOrders(dummySorted);
-        setError("Using dummy data - API unavailable");
+        setError(
+          "Using dummy data - API unavailable. Check console for details."
+        );
       } finally {
         setIsLoading(false);
       }
@@ -63,6 +72,7 @@ const OrderList = () => {
     <div className="bg-white rounded-xl shadow-md overflow-hidden">
       <div className="p-4 border-b border-gray-200">
         <h2 className="text-lg font-semibold text-gray-800">Recent Orders</h2>
+        {error && <p className="text-sm text-yellow-600 mt-1">{error}</p>}
       </div>
       <div className="overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-200">
@@ -92,8 +102,9 @@ const OrderList = () => {
                   #{order._id.slice(-6).toUpperCase()}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {order.customer?.name ||
-                    `Customer ${order.customer?.slice(-4) || ""}`}
+                  {typeof order.customer === "object"
+                    ? order.customer?.name
+                    : getCustomerName(order.customer)}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                   {getTotalItems(order.items)} items

@@ -9,10 +9,12 @@ const TotalCustomers = () => {
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
+        // Try to fetch from API first
         const response = await axios.get("http://localhost:4000/api/customers");
         setCustomers(response.data);
-      } catch (apiError) {
-        console.warn("API request failed, using dummy data", apiError);
+      } catch (error) {
+        console.warn("API request failed, using dummy data", error);
+        // Fall back to dummy data
         setCustomers(DummyData.customers || []);
       } finally {
         setIsLoading(false);

@@ -15,10 +15,9 @@ const TotalRevenue = () => {
           0
         );
         setTotalRevenue(total);
-      } catch (apiError) {
-        console.warn("API request failed, using dummy data", apiError);
-        // Calculate from dummy data
-        const dummyTotal = DummyData.orders.reduce(
+      } catch (error) {
+        console.warn("API request failed, using dummy data", error);
+        const dummyTotal = (DummyData.orders || []).reduce(
           (sum, order) => sum + (order.total || 0),
           0
         );
@@ -35,14 +34,6 @@ const TotalRevenue = () => {
     return <div>Loading revenue...</div>;
   }
 
-  // Format the number with 2 decimal places and add $ sign
-  const formattedRevenue = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(totalRevenue);
-
   return (
     <div className="flex justify-center items-center">
       <div className="flex flex-col justify-center items-center w-64 h-40 bg-white border rounded-xl shadow-md">
@@ -51,8 +42,8 @@ const TotalRevenue = () => {
         </h2>
         <div className="relative w-24 h-24 rounded-full bg-purple-100 flex items-center justify-center">
           <div className="w-16 h-16 rounded-full bg-purple-500 flex items-center justify-center">
-            <span className="text-white text-lg font-bold">
-              {formattedRevenue}
+            <span className="text-white text-sm font-bold">
+              ${totalRevenue.toFixed(2)}
             </span>
           </div>
         </div>
