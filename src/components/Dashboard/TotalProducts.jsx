@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import DummyData from "../../DummyData.json";
+import DummyData from "../../../DummyData.json";
 
 const TotalProducts = () => {
   const [products, setProducts] = useState([]);

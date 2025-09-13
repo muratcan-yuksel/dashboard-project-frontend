@@ -1,8 +1,9 @@
 import React from "react";
-import TotalCustomers from "./Dashboard/TotalCustomers";
-import TotalProducts from "./Dashboard/TotalProducts";
-import TotalOrders from "./Dashboard/TotalOrders";
-import TotalRevenue from "./Dashboard/TotalRevenue";
+import TotalCustomers from "./components/Dashboard/TotalCustomers";
+import TotalProducts from "./components/Dashboard/TotalProducts";
+import TotalOrders from "./components/Dashboard/TotalOrders";
+import TotalRevenue from "./components/Dashboard/TotalRevenue";
+import OrderList from "./components/orderList";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <TotalRevenue />
         </div>
       </div>
+      <OrderList />
     </div>
   );
 };
