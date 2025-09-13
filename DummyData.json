@@ -1,0 +1,395 @@
+{
+  "customers": [
+    {
+      "_id": "647a1f2e8b4c5d6e7f8a9b0c",
+      "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "name": "John Doe",
+      "email": "john.doe@email.com",
+      "phone": "+1-555-0101",
+      "createdAt": "2024-01-15T10:30:00.000Z",
+      "updatedAt": "2024-01-15T10:30:00.000Z"
+    },
+    {
+      "_id": "647a1f2e8b4c5d6e7f8a9b0d",
+      "uuid": "b2c3d4e5-f6g7-8901-bcde-f23456789012",
+      "name": "Jane Smith",
+      "email": "jane.smith@email.com",
+      "phone": "+1-555-0102",
+      "createdAt": "2024-01-16T14:45:00.000Z",
+      "updatedAt": "2024-01-16T14:45:00.000Z"
+    },
+    {
+      "_id": "647a1f2e8b4c5d6e7f8a9b0e",
+      "uuid": "c3d4e5f6-g7h8-9012-cdef-345678901234",
+      "name": "Mike Johnson",
+      "email": "mike.johnson@email.com",
+      "phone": "+1-555-0103",
+      "createdAt": "2024-01-17T09:15:00.000Z",
+      "updatedAt": "2024-01-17T09:15:00.000Z"
+    },
+    {
+      "_id": "647a1f2e8b4c5d6e7f8a9b0f",
+      "uuid": "d4e5f6g7-h8i9-0123-defg-456789012345",
+      "name": "Sarah Williams",
+      "email": "sarah.williams@email.com",
+      "phone": "+1-555-0104",
+      "createdAt": "2024-01-18T16:20:00.000Z",
+      "updatedAt": "2024-01-18T16:20:00.000Z"
+    },
+    {
+      "_id": "647a1f2e8b4c5d6e7f8a9b10",
+      "uuid": "e5f6g7h8-i9j0-1234-efgh-567890123456",
+      "name": "David Brown",
+      "email": "david.brown@email.com",
+      "phone": "+1-555-0105",
+      "createdAt": "2024-01-19T11:30:00.000Z",
+      "updatedAt": "2024-01-19T11:30:00.000Z"
+    },
+    {
+      "_id": "647a1f2e8b4c5d6e7f8a9b11",
+      "uuid": "f6g7h8i9-j0k1-2345-fghi-678901234567",
+      "name": "Emma Davis",
+      "email": "emma.davis@email.com",
+      "phone": "+1-555-0106",
+      "createdAt": "2024-01-20T13:45:00.000Z",
+      "updatedAt": "2024-01-20T13:45:00.000Z"
+    }
+  ],
+
+  "products": [
+    {
+      "_id": "647b2f3e9c5d6e7f8a9b1c2d",
+      "uuid": "prod-uuid-001",
+      "name": "Wireless Bluetooth Headphones",
+      "price": 99.99,
+      "stock": 45,
+      "createdAt": "2024-01-10T08:00:00.000Z"
+    },
+    {
+      "_id": "647b2f3e9c5d6e7f8a9b1c2e",
+      "uuid": "prod-uuid-002",
+      "name": "Smartphone Case",
+      "price": 24.99,
+      "stock": 120,
+      "createdAt": "2024-01-11T10:30:00.000Z"
+    },
+    {
+      "_id": "647b2f3e9c5d6e7f8a9b1c2f",
+      "uuid": "prod-uuid-003",
+      "name": "USB-C Charging Cable",
+      "price": 15.99,
+      "stock": 200,
+      "createdAt": "2024-01-12T14:15:00.000Z"
+    },
+    {
+      "_id": "647b2f3e9c5d6e7f8a9b1c30",
+      "uuid": "prod-uuid-004",
+      "name": "Wireless Mouse",
+      "price": 49.99,
+      "stock": 75,
+      "createdAt": "2024-01-13T09:45:00.000Z"
+    },
+    {
+      "_id": "647b2f3e9c5d6e7f8a9b1c31",
+      "uuid": "prod-uuid-005",
+      "name": "Laptop Stand",
+      "price": 79.99,
+      "stock": 35,
+      "createdAt": "2024-01-14T11:20:00.000Z"
+    },
+    {
+      "_id": "647b2f3e9c5d6e7f8a9b1c32",
+      "uuid": "prod-uuid-006",
+      "name": "Bluetooth Speaker",
+      "price": 129.99,
+      "stock": 60,
+      "createdAt": "2024-01-15T15:30:00.000Z"
+    },
+    {
+      "_id": "647b2f3e9c5d6e7f8a9b1c33",
+      "uuid": "prod-uuid-007",
+      "name": "Webcam HD 1080p",
+      "price": 89.99,
+      "stock": 25,
+      "createdAt": "2024-01-16T12:10:00.000Z"
+    },
+    {
+      "_id": "647b2f3e9c5d6e7f8a9b1c34",
+      "uuid": "prod-uuid-008",
+      "name": "Mechanical Keyboard",
+      "price": 159.99,
+      "stock": 40,
+      "createdAt": "2024-01-17T16:45:00.000Z"
+    }
+  ],
+
+  "orders": [
+    {
+      "_id": "647c3f4e0d6e7f8a9b1c2d3e",
+      "customer": "647a1f2e8b4c5d6e7f8a9b0c",
+      "items": [
+        {
+          "product": "647b2f3e9c5d6e7f8a9b1c2d",
+          "quantity": 2,
+          "price": 99.99
+        },
+        {
+          "product": "647b2f3e9c5d6e7f8a9b1c2e",
+          "quantity": 1,
+          "price": 24.99
+        }
+      ],
+      "total": 224.97,
+      "createdAt": "2024-01-20T10:30:00.000Z"
+    },
+    {
+      "_id": "647c3f4e0d6e7f8a9b1c2d3f",
+      "customer": "647a1f2e8b4c5d6e7f8a9b0d",
+      "items": [
+        {
+          "product": "647b2f3e9c5d6e7f8a9b1c30",
+          "quantity": 1,
+          "price": 49.99
+        }
+      ],
+      "total": 49.99,
+      "createdAt": "2024-01-21T14:15:00.000Z"
+    },
+    {
+      "_id": "647c3f4e0d6e7f8a9b1c2d40",
+      "customer": "647a1f2e8b4c5d6e7f8a9b0e",
+      "items": [
+        {
+          "product": "647b2f3e9c5d6e7f8a9b1c31",
+          "quantity": 1,
+          "price": 79.99
+        },
+        {
+          "product": "647b2f3e9c5d6e7f8a9b1c2f",
+          "quantity": 3,
+          "price": 15.99
+        }
+      ],
+      "total": 127.96,
+      "createdAt": "2024-01-22T09:45:00.000Z"
+    },
+    {
+      "_id": "647c3f4e0d6e7f8a9b1c2d41",
+      "customer": "647a1f2e8b4c5d6e7f8a9b0f",
+      "items": [
+        {
+          "product": "647b2f3e9c5d6e7f8a9b1c32",
+          "quantity": 1,
+          "price": 129.99
+        }
+      ],
+      "total": 129.99,
+      "createdAt": "2024-01-23T16:20:00.000Z"
+    },
+    {
+      "_id": "647c3f4e0d6e7f8a9b1c2d42",
+      "customer": "647a1f2e8b4c5d6e7f8a9b10",
+      "items": [
+        {
+          "product": "647b2f3e9c5d6e7f8a9b1c33",
+          "quantity": 1,
+          "price": 89.99
+        },
+        {
+          "product": "647b2f3e9c5d6e7f8a9b1c2e",
+          "quantity": 2,
+          "price": 24.99
+        }
+      ],
+      "total": 139.97,
+      "createdAt": "2024-01-24T11:10:00.000Z"
+    },
+    {
+      "_id": "647c3f4e0d6e7f8a9b1c2d43",
+      "customer": "647a1f2e8b4c5d6e7f8a9b11",
+      "items": [
+        {
+          "product": "647b2f3e9c5d6e7f8a9b1c34",
+          "quantity": 1,
+          "price": 159.99
+        },
+        {
+          "product": "647b2f3e9c5d6e7f8a9b1c30",
+          "quantity": 1,
+          "price": 49.99
+        }
+      ],
+      "total": 209.98,
+      "createdAt": "2024-01-25T13:30:00.000Z"
+    }
+  ],
+
+  "ordersWithPopulatedData": [
+    {
+      "_id": "647c3f4e0d6e7f8a9b1c2d3e",
+      "customer": {
+        "_id": "647a1f2e8b4c5d6e7f8a9b0c",
+        "name": "John Doe",
+        "email": "john.doe@email.com"
+      },
+      "items": [
+        {
+          "product": {
+            "_id": "647b2f3e9c5d6e7f8a9b1c2d",
+            "name": "Wireless Bluetooth Headphones",
+            "uuid": "prod-uuid-001"
+          },
+          "quantity": 2,
+          "price": 99.99
+        },
+        {
+          "product": {
+            "_id": "647b2f3e9c5d6e7f8a9b1c2e",
+            "name": "Smartphone Case",
+            "uuid": "prod-uuid-002"
+          },
+          "quantity": 1,
+          "price": 24.99
+        }
+      ],
+      "total": 224.97,
+      "createdAt": "2024-01-20T10:30:00.000Z"
+    },
+    {
+      "_id": "647c3f4e0d6e7f8a9b1c2d3f",
+      "customer": {
+        "_id": "647a1f2e8b4c5d6e7f8a9b0d",
+        "name": "Jane Smith",
+        "email": "jane.smith@email.com"
+      },
+      "items": [
+        {
+          "product": {
+            "_id": "647b2f3e9c5d6e7f8a9b1c30",
+            "name": "Wireless Mouse",
+            "uuid": "prod-uuid-004"
+          },
+          "quantity": 1,
+          "price": 49.99
+        }
+      ],
+      "total": 49.99,
+      "createdAt": "2024-01-21T14:15:00.000Z"
+    },
+    {
+      "_id": "647c3f4e0d6e7f8a9b1c2d40",
+      "customer": {
+        "_id": "647a1f2e8b4c5d6e7f8a9b0e",
+        "name": "Mike Johnson",
+        "email": "mike.johnson@email.com"
+      },
+      "items": [
+        {
+          "product": {
+            "_id": "647b2f3e9c5d6e7f8a9b1c31",
+            "name": "Laptop Stand",
+            "uuid": "prod-uuid-005"
+          },
+          "quantity": 1,
+          "price": 79.99
+        },
+        {
+          "product": {
+            "_id": "647b2f3e9c5d6e7f8a9b1c2f",
+            "name": "USB-C Charging Cable",
+            "uuid": "prod-uuid-003"
+          },
+          "quantity": 3,
+          "price": 15.99
+        }
+      ],
+      "total": 127.96,
+      "createdAt": "2024-01-22T09:45:00.000Z"
+    }
+  ],
+
+  "dashboardStats": {
+    "totalCustomers": 1247,
+    "activeProducts": 89,
+    "totalOrders": 3456,
+    "revenue": 127500,
+    "revenueGrowth": 18,
+    "customerGrowth": 12,
+    "orderGrowth": 23,
+    "newProductsThisWeek": 5
+  },
+
+  "recentActivity": [
+    {
+      "id": 1,
+      "type": "order",
+      "message": "New order #3456 from Emma Davis",
+      "timestamp": "2024-01-25T13:30:00.000Z",
+      "amount": 209.98
+    },
+    {
+      "id": 2,
+      "type": "customer",
+      "message": "New customer David Brown registered",
+      "timestamp": "2024-01-25T11:15:00.000Z"
+    },
+    {
+      "id": 3,
+      "type": "product",
+      "message": "Mechanical Keyboard added to inventory",
+      "timestamp": "2024-01-25T09:20:00.000Z"
+    },
+    {
+      "id": 4,
+      "type": "order",
+      "message": "Order #3455 shipped to Sarah Williams",
+      "timestamp": "2024-01-24T16:45:00.000Z",
+      "amount": 129.99
+    }
+  ],
+
+  "reportData": {
+    "customerProductQuantities": {
+      "647a1f2e8b4c5d6e7f8a9b0c": [
+        {
+          "productId": "647b2f3e9c5d6e7f8a9b1c2d",
+          "productName": "Wireless Bluetooth Headphones",
+          "totalQuantity": 2
+        },
+        {
+          "productId": "647b2f3e9c5d6e7f8a9b1c2e",
+          "productName": "Smartphone Case",
+          "totalQuantity": 1
+        }
+      ]
+    },
+    "monthlySales": [
+      { "month": "Jan", "sales": 45000 },
+      { "month": "Feb", "sales": 52000 },
+      { "month": "Mar", "sales": 48000 },
+      { "month": "Apr", "sales": 61000 },
+      { "month": "May", "sales": 55000 },
+      { "month": "Jun", "sales": 67000 }
+    ],
+    "topProducts": [
+      {
+        "productId": "647b2f3e9c5d6e7f8a9b1c2e",
+        "productName": "Smartphone Case",
+        "totalSold": 45,
+        "revenue": 1124.55
+      },
+      {
+        "productId": "647b2f3e9c5d6e7f8a9b1c2f",
+        "productName": "USB-C Charging Cable",
+        "totalSold": 38,
+        "revenue": 607.62
+      },
+      {
+        "productId": "647b2f3e9c5d6e7f8a9b1c2d",
+        "productName": "Wireless Bluetooth Headphones",
+        "totalSold": 28,
+        "revenue": 2799.72
+      }
+    ]
+  }
+}
