@@ -5,7 +5,7 @@ import DummyData from "../../DummyData.json";
 const OrderList = () => {
   const [orders, setOrders] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [setError] = useState(null);
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -63,7 +63,6 @@ const OrderList = () => {
     <div className="bg-white rounded-xl shadow-md overflow-hidden">
       <div className="p-4 border-b border-gray-200">
         <h2 className="text-lg font-semibold text-gray-800">Recent Orders</h2>
-        {error && <p className="text-sm text-yellow-600 mt-1">{error}</p>}
       </div>
       <div className="overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-200">
@@ -110,7 +109,7 @@ const OrderList = () => {
           </tbody>
         </table>
       </div>
-      {orders.length === 0 && (
+      {orders.length === 0 && !isLoading && (
         <div className="p-6 text-center text-gray-500">No orders found</div>
       )}
     </div>
