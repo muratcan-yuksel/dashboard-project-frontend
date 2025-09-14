@@ -5,7 +5,10 @@ import TotalRevenue from "./components/Dashboard/TotalRevenue";
 import TotalCustomers from "./components/Dashboard/TotalCustomers";
 import TotalProducts from "./components/Dashboard/TotalProducts";
 import TotalOrders from "./components/Dashboard/TotalOrders";
-import OrderList from "./components/orderList";
+import OrderList from "./components/SideBar/orderList";
+import CustomerList from "./components/SideBar/CustomerList";
+import ProductList from "./components/SideBar/ProductList";
+import Charts from "./components/Dashboard/Charts";
 
 function App() {
   return (
@@ -25,6 +28,7 @@ function App() {
                   <TotalOrders />
                 </div>
                 <OrderList />
+                <Charts />
               </div>
             }
           />
@@ -32,8 +36,7 @@ function App() {
             path="/customers"
             element={
               <div className="p-4 md:p-8">
-                <h1 className="text-2xl font-bold mb-6">Customers</h1>
-                {/* Add customers component here */}
+                <CustomerList />
               </div>
             }
           />
@@ -41,8 +44,7 @@ function App() {
             path="/products"
             element={
               <div className="p-4 md:p-8">
-                <h1 className="text-2xl font-bold mb-6">Products</h1>
-                {/* Add products component here */}
+                <ProductList />
               </div>
             }
           />

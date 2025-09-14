@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import DummyData from "../../DummyData.json";
+import DummyData from "../../../DummyData.json";
 
 const OrderList = () => {
   const [orders, setOrders] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [setError] = useState(null);
 
   const getCustomerName = (customerId) => {
     const customer = DummyData.customers.find((c) => c._id === customerId);
@@ -72,7 +72,7 @@ const OrderList = () => {
     <div className="bg-white rounded-xl shadow-md overflow-hidden">
       <div className="p-4 border-b border-gray-200">
         <h2 className="text-lg font-semibold text-gray-800">Recent Orders</h2>
-        {error && <p className="text-sm text-yellow-600 mt-1">{error}</p>}
+        {/* {error && <p className="text-sm text-yellow-600 mt-1">{error}</p>} */}
       </div>
       <div className="overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-200">
