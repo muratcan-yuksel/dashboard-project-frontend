@@ -133,14 +133,24 @@ const Charts = () => {
   };
 
   return (
-    <div className="space-y-6">
-      {/* Sales Trend Line Chart */}
-      <div className="bg-white p-6 rounded-xl shadow-md">
+    <div className="space-y-6 ">
+      {/* Sales Trend Line Chart - Full Width */}
+      <div className="bg-white p-6 rounded-xl shadow-md w-full">
         <h3 className="text-lg font-semibold text-gray-800 mb-4">
           Sales Trend (Last 7 Months)
         </h3>
-        <div className="h-80">
-          <Line data={lineChartData} options={chartOptions} />
+        <div className="w-full h-80">
+          <Line
+            data={lineChartData}
+            options={{
+              ...chartOptions,
+              responsive: true,
+              maintainAspectRatio: false,
+              layout: {
+                padding: 0,
+              },
+            }}
+          />
         </div>
       </div>
 

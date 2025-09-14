@@ -19,16 +19,23 @@ function App() {
           <Route
             path="/"
             element={
-              <div className="p-4 md:p-8">
-                <h1 className="text-2xl font-bold mb-6">Dashboard Overview</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                  <TotalRevenue />
-                  <TotalCustomers />
-                  <TotalProducts />
-                  <TotalOrders />
+              <div className="p-4 md:p-8 space-y-8">
+                <div>
+                  <h1 className="text-2xl font-bold mb-6">
+                    Dashboard Overview
+                  </h1>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <TotalRevenue />
+                    <TotalCustomers />
+                    <TotalProducts />
+                    <TotalOrders />
+                  </div>
                 </div>
-                <OrderList />
-                <Charts />
+
+                <div className="space-y-8">
+                  <OrderList />
+                  <Charts />
+                </div>
               </div>
             }
           />
@@ -61,8 +68,8 @@ function App() {
             path="/reports"
             element={
               <div className="p-4 md:p-8">
-                <h1 className="text-2xl font-bold mb-6">Reports</h1>
-                {/* Add reports component here */}
+                <h1 className="text-2xl font-bold mb-6">Analytics Reports</h1>
+                <Charts />
               </div>
             }
           />
