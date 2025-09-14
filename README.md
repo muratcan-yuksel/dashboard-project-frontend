@@ -1,12 +1,145 @@
-# React + Vite
+# Dashboard Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive admin dashboard built with React and Tailwind CSS, designed to provide a clean and intuitive interface for managing e-commerce data.
 
-Currently, two official plugins are available:
+## 📸 Screenshots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Dashboard Overview
 
-## Expanding the ESLint configuration
+![Dashboard Overview](./screenshots/dashboardoverview.png)
+The main dashboard provides a comprehensive overview of your e-commerce metrics, featuring key performance indicators, recent orders, and quick access to important functions. The clean, modern interface is designed for at-a-glance monitoring of your business performance.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Interactive Charts
+
+![Interactive Charts](./screenshots/charts.png)
+Visualize your sales and customer data with our interactive charts. Track trends, compare metrics, and gain valuable insights into your business performance through intuitive data visualizations.
+
+### Product Grid View
+
+![Product Grid View](./screenshots/productgrid.png)
+Browse your product catalog in a clean, organized grid layout. The responsive design ensures products are displayed optimally across all device sizes, with easy filtering and search functionality.
+
+### Mobile Responsive Design
+
+![Mobile View](./screenshots/mobileviewdashboard.png)
+Our fully responsive design ensures seamless access to all dashboard features on mobile devices. The interface automatically adapts to different screen sizes, providing an optimal viewing experience on any device.
+
+## 🚀 Features
+
+- **Dashboard Overview**: At-a-glance metrics and visualizations
+- **Customer Management**: View and manage customer information
+- **Product Catalog**: Browse and manage product inventory
+- **Order Tracking**: Monitor and manage customer orders
+- **Responsive Design**: Works on desktop and tablet devices
+- **Fallback Data**: Uses local dummy data when API is unavailable
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework**: React 19
+- **Styling**: Tailwind CSS
+- **Data Visualization**: Chart.js with react-chartjs-2
+- **HTTP Client**: Axios
+- **Routing**: React Router DOM
+- **Icons**: React Icons
+- **Build Tool**: Vite
+
+## 📊 API Endpoints
+
+The application attempts to connect to a backend API at `http://localhost:4000` with the following endpoints:
+
+- `GET /api/customers` - Fetch customer data
+- `GET /api/products` - Fetch product catalog
+- `GET /api/orders` - Fetch order history
+- `GET /api/recent-activity` - Fetch recent system activities
+
+### Fallback Mechanism
+
+If the API is not available (e.g., backend server is down), the application automatically falls back to using the local `DummyData.json` file. This ensures the application remains functional for demonstration purposes.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone [your-repository-url]
+   cd dashboard-frontend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
+
+### Running the Application
+
+1. Start the development server:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+2. Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Building for Production
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── assets/           # Static assets
+├── components/       # Reusable components
+│   ├── Dashboard/    # Dashboard-specific components
+│   └── SideBar/      # Sidebar navigation components
+├── App.jsx           # Main application component
+└── main.jsx          # Application entry point
+```
+
+## 🛠 Development
+
+- Lint code:
+
+  ```bash
+  npm run lint
+  # or
+  yarn lint
+  ```
+
+- Preview production build:
+  ```bash
+  npm run preview
+  # or
+  yarn preview
+  ```
+
+## 🤝 Contributing
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Made with ❤️ by [Your Name]
