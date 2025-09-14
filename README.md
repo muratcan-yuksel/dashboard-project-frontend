@@ -35,7 +35,7 @@ Our fully responsive design ensures seamless access to all dashboard features on
 
 ## 🛠️ Tech Stack
 
-- **Frontend Framework**: React 19
+- **Frontend Framework**: React
 - **Styling**: Tailwind CSS
 - **Data Visualization**: Chart.js with react-chartjs-2
 - **HTTP Client**: Axios
