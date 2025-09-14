@@ -111,23 +111,6 @@ src/
 └── main.jsx          # Application entry point
 ```
 
-## 🛠 Development
-
-- Lint code:
-
-  ```bash
-  npm run lint
-  # or
-  yarn lint
-  ```
-
-- Preview production build:
-  ```bash
-  npm run preview
-  # or
-  yarn preview
-  ```
-
 ## 📄 License
 
 This project is licensed under the MIT License
